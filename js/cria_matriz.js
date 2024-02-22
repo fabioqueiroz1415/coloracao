@@ -6,8 +6,7 @@ function criarMatriz() {
         for(var j=0; j<n; j++) {
             var input = document.createElement('input');
             input.type = 'text';
-            input.style.width = '50px';
-            input.style.height = '50px';
+            input.classList.add('matriz-input');
             matrizDiv.appendChild(input);
         }
         matrizDiv.appendChild(document.createElement('br'));
