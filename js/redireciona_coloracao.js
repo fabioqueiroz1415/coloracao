@@ -1,4 +1,5 @@
 function escolherOpcao() {
+    console.error("aaaaaaaaaaaaaaaaa");
     var opcao = document.getElementById('opcoes').value;
     switch(opcao) {
         case 'coloracao':
