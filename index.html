@@ -2,19 +2,19 @@
 <html>
 <head>
     <title>Matriz Quadrada</title>
-    
+    <!--css-->
     <link rel="stylesheet" type="text/css" href="css//styles.css">
-    
+
+    <!--ícone-->
     <link rel="icon" href="images/icone.ico" type="image/x-ico">
+    
+    <!--scripts-->
+    <script src = "js//redireciona_coloracao.js"></script>
+    <script src = "js//cria_matriz.js"></script>
 </head>
 
 <body>
     <div class = "flex-container">
-        <div id="matriz">
-            <input type="number" id="tamanho" placeholder="Insira o tamanho da matriz">
-            <button onclick="criarMatriz()">Criar Matriz</button>
-        </div>
-
         <div id="opcao">
             <select id="opcoes">
                 <option value="coloracao">Coloração</option>
@@ -23,11 +23,10 @@
             </select>
             <button onclick="escolherOpcao()">Ir</button>
         </div>
-    </div>
-
-    <div>
-        <script src = "js//redireciona_coloracao.js"></script>
-        <script src = "js//cria_matriz.js"></script>
+        <div id="matriz">
+            <input type="number" id="tamanho" placeholder="Insira o tamanho da matriz">
+            <button onclick="criarMatriz()">Criar Matriz</button>
+        </div>
     </div>
 </body>
 </html>
