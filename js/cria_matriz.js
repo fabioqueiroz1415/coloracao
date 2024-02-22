@@ -5,10 +5,12 @@ function criarMatriz() {
     for(var i=0; i<n; i++) {
         for(var j=0; j<n; j++) {
             var input = document.createElement('input');
-            input.type = 'text';
+            input.type = 'number';
+            input.min = 0;
+            input.max = 11;
             input.classList.add('matriz-input');
             matrizDiv.appendChild(input);
         }
-        matrizDiv.appendChild(document.createElement('br'));
+        matrizDiv.appendChild(document.createElement('matriz'));
     }
 }
