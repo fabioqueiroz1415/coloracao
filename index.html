@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Matriz Quadrada</title>
-    <!--css-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <head>
+        <title>Tipos de Coloração</title>
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <!--ícone-->
-    <link rel="icon" href="images/icone.ico" type="image/x-ico">
-    
-    <!--scripts-->
-    <script src = "js/redireciona_coloracao.js"></script>
-    <script src = "js/cria_matriz.js"></script>
-</head>
+        <!--ícone-->
+        <link rel="icon" href="images/icone.ico" type="image/x-ico">
+        
+        <!--scripts-->
+        <script src = "js//coloracao.js"></script>
+        <script src = "js//matriz.js"></script>
+        <script src = "js//erro.js"></script>
+    </head>
 
-<body>
-    <div class = "flex-container">
-        <div id="opcao">
-            <select id="opcoes">
-                <option value="coloracao">Coloração</option>
-                <option value="harmonica">Harmônica</option>
-                <option value="completa">Completa</option>
-            </select>
-            <button onclick="escolherOpcao()">Ir</button>
+    <body>
+        <div class = "flex-container">
+            <div id="opcao">
+                <select id="opcoes">
+                    <option value="cromatico">Numero Cromático</option>
+                    <option value="harmoniosa">Coloracao Harmoniosa</option>
+                    <option value="completa">Coloração Completa</option>
+                </select>
+                <button onclick="calcularColoracao()">Calcular</button>
+            </div>
+
+            <div id="matriz">
+                <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="qtd de vértices">
+                <button onclick="criarMatriz()">Criar Matriz</button>
+            </div>
         </div>
-
-        <div id="matriz">
-            <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="Insira o tamanho da matriz">
-            <button onclick="criarMatriz()">Criar Matriz</button>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
 
