@@ -1,13 +1,13 @@
 function escolherOpcao() {
     var opcao = document.getElementById('opcoes').value;
     switch(opcao) {
-        case 'Coloração':
+        case 'coloracao':
             window.location.href = 'https://fabioqueiroz1415.github.io/coloracao/html/coloracao.html';
             break;
-        case 'Harmônica':
+        case 'harmonica':
             window.location.href = 'https://fabioqueiroz1415.github.io/coloracao/html/harmonica.html';
             break;
-        case 'Completa':
+        case 'completa':
             window.location.href = 'https://fabioqueiroz1415.github.io/coloracao/html/completa.html';
             break;
         default:
