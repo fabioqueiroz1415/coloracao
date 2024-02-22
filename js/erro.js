@@ -1,5 +1,5 @@
-export function exibirPopupErro(id) {
-    var errorPopup = document.getElementById(id);
+export function exibirPopupErro() {
+    var errorPopup = document.getElementById("teste");
     errorPopup.classList.add("error-popup");
     errorPopup.style.display = 'block'; // Exibe o popup de erro
 }
