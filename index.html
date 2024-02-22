@@ -3,14 +3,14 @@
 <head>
     <title>Matriz Quadrada</title>
     <!--css-->
-    <link rel="stylesheet" type="text/css" href="css//styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!--ícone-->
     <link rel="icon" href="images/icone.ico" type="image/x-ico">
     
     <!--scripts-->
-    <script src = "js//redireciona_coloracao.js"></script>
-    <script src = "js//cria_matriz.js"></script>
+    <script src = "js/redireciona_coloracao.js"></script>
+    <script src = "js/cria_matriz.js"></script>
 </head>
 
 <body>
@@ -24,8 +24,8 @@
             <button onclick="escolherOpcao()">Ir</button>
         </div>
 
-        <div id="cria_matriz">
-            <input type="number" id="tamanho" placeholder="Insira o tamanho da matriz">
+        <div id="matriz">
+            <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="Insira o tamanho da matriz">
             <button onclick="criarMatriz()">Criar Matriz</button>
         </div>
     </div>
