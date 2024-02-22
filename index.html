@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Escolha uma Opção</title>
+    <title>Matriz Quadrada</title>
 </head>
-<link rel="icon" href="images/icone.ico" type="image/x-ico">
+
 <body>
-    <select id="opcoes">
-        <option value="coloracao">Coloração</option>
-        <option value="harmonica">Harmônica</option>
-        <option value="completa">Completa</option>
-    </select>
-    <button onclick="escolherOpcao()">Ir</button>
-    <script src = "js//redireciona_coloracao.js"></script>
+    <input type="number" id="tamanho" placeholder="Insira o tamanho da matriz">
+    <button onclick="criarMatriz()">Criar Matriz</button>
+    <div id="matriz"></div>
+    <script>src = "js//cria_matriz.js"</script>
 </body>
 </html>
 
