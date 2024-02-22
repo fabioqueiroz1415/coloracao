@@ -11,6 +11,6 @@ function criarMatriz() {
             input.classList.add('matriz-input');
             matrizDiv.appendChild(input);
         }
-        matrizDiv.appendChild(document.createElement('matriz'));
+        matrizDiv.appendChild(document.createElement('br'));
     }
 }
