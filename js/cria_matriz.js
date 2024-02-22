@@ -7,6 +7,7 @@ function criarMatriz() {
             var input = document.createElement('input');
             input.type = 'text';
             input.style.width = '50px';
+            input.style.height = '50px';
             matrizDiv.appendChild(input);
         }
         matrizDiv.appendChild(document.createElement('br'));
