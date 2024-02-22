@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "commit -m \"alterações\"",
+            "type": "shell",
+            "command": "git add . && git commit \"alterações\""
+        },
+        {
+            "label": "alterar para dearsFR",
+            "type": "shell",
+            "command": "git config --global user.email = \"fabioaureliodedeus@gmail.com\" && git config --global user.name\"dearsfr\""
+
+        },
+        {
+            "label": "alterar para fabioqueiroz1415",
+            "type": "shell",
+            "command": "git config --global user.email = \"fabio_queiroz@discente.ufcat.edu.br\" && git config --global user.name\"fabioqueiroz1415\""
+
+        }
+    ]
+}
