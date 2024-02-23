@@ -9,8 +9,8 @@ function criarMatriz() {
         alert("0 < nº de vértices <= 10");
         return;
     }
-    for(var i=-1; i<=n; i++) {
-        for(var j=-1; j<=n; j++) {
+    for(var i=-1; i<n; i++) {
+        for(var j=-1; j<n; j++) {
             if(i == -1) {
                 //rotulando colunas
                 var input = document.createElement('input');
@@ -33,6 +33,7 @@ function criarMatriz() {
             }
             var input = document.createElement('input');
             input.type = 'number';
+            input.id = i+' '+j;
             input.max = 1000;
             input.min = -1000;
             input.classList.add('matriz-input');
