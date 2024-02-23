@@ -16,6 +16,10 @@
     <body>
         <div class="separacao">
             <div class = "flex-container">
+                <div id="cria-matriz">
+                    <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="quantidade de vértices" class="caixa-entrada">
+                    <button onclick="criarMatriz()" class="botao" id="botao-cria-matriz">Criar Matriz Adjacência</button>
+                </div>
                 <div id="opcao">
                     <select id="opcoes" class="caixa-entrada">
                         <option value="cromatico">Numero Cromático</option>
@@ -24,14 +28,11 @@
                     </select>
                     <button onclick="colorirVertices()" class="botao">Colorir</button>
                 </div>
-
-                <div id="cria-matriz">
-                    <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="quantidade de vértices" class="caixa-entrada">
-                    <button onclick="criarMatriz()" class="botao" id="botao-cria-matriz">Criar Matriz</button>
-                </div>
             </div>
 
-            <div id="resultado" class="resultado">  </div>
+            <div>
+                <p id="resultado" class="resultado">Resultado:</p>
+            </div>
 
             <div id="matriz"></div>
         </div>

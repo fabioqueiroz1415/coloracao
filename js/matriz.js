@@ -8,10 +8,13 @@ function criarMatriz() {
         if(!recriaMatriz) return;
     }
 
+    //omitindo o resultado anterior, se houver
+    document.getElementById("resultado").style.visibility = "hidden";
+
     vertices = document.getElementById('tamanho').value;
     var matrizDiv = document.getElementById('matriz');
     var letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    document.getElementById("botao-cria-matriz").textContent = "Recriar Matriz";
+    document.getElementById("botao-cria-matriz").textContent = "Recriar Matriz Adjacência";
     matrizDiv.innerHTML = '';
 
     if(vertices>9 || vertices < 1){

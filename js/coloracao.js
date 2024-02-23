@@ -133,12 +133,9 @@ function coloreVertices(matrizAdjacencia) {
     }
 
     //mostrando o numero de coloracao
-    var divN = document.getElementById("resultado");
-    var texto = document.createTextNode("Número Cromático: " + numeroCromatico(getMatriz()));
-    var paragrafo = document.createElement("p");
-    paragrafo.appendChild(texto);
-    divN.appendChild(paragrafo);
-
+    var paragrafo = document.getElementById("resultado");
+    paragrafo.textContent = "Número Cromático: " + numeroCromatico(getMatriz());
+    paragrafo.style.visibility = "visible";
 }
 
 function colorirVertices() {

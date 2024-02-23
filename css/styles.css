@@ -52,6 +52,8 @@
     border-radius: 5px; /* Bordas arredondadas */
     padding: 10px 20px; /* Espaçamento interno */
     cursor: pointer; /* Mostrar o cursor de mão ao passar por cima */
+    width: 160px;
+    height: 50px;
 }
 
 .botao:hover {
@@ -59,9 +61,11 @@
 }
 
 .separacao > div{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .resultado {
     font-size: 17px;
+    visibility: hidden;
 }
+
