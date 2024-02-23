@@ -93,6 +93,17 @@ function numeroCromaticoCores(matrizAdjacencia) {
     return cores;
 }
 
+function numeroCromatico(matrizAdjacencia) {
+    var vertices = window.vertices;
+    var numCromatico = 0;
+    var cores = numeroCromaticoCores(matrizAdjacencia);
+    for(let i = 0; i < vertices; i ++) {
+        if(numCromatico < cores[i]) numCromatico = cores[i];
+    }
+
+    return numCromatico;
+}
+
 function coloreVertices(matrizAdjacencia) {
     var vertices = window.vertices;
     var coresDisponiveis = [
@@ -120,6 +131,14 @@ function coloreVertices(matrizAdjacencia) {
         input = document.getElementById(vertice + " " + (-1));
         input.style.background = cores[vertice];
     }
+
+    //mostrando o numero de coloracao
+    var divN = document.getElementById("resultado");
+    var texto = document.createTextNode("Número Cromático: " + numeroCromatico(getMatriz()));
+    var paragrafo = document.createElement("p");
+    paragrafo.appendChild(texto);
+    divN.appendChild(paragrafo);
+
 }
 
 function colorirVertices() {
