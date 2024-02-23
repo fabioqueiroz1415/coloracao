@@ -1,6 +1,6 @@
 .flex-container {
     display: flex;
-    align-items: center;
+    align-items:start ;
 }
 
 .flex-container > div {
@@ -22,20 +22,38 @@
     font-size: 16px;
     text-align: center;
     background-color: transparent;
+    border-color: transparent;
     color: black;
     
 }
 
+.caixa-entrada {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+}
 
-.error-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffcccc;
-    padding: 20px;
-    border: 2px solid #ff0000;
-    border-radius: 10px;
-    z-index: 9999;
-    display: none; /* O popup é ocultado inicialmente */
+.caixa-entrada::placeholder {
+    color: #999; 
+}
+
+.caixa-entrada:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 5px #66afe9;
+}
+
+.botao {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remover a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Mostrar o cursor de mão ao passar por cima */
+}
+
+.botao:hover {
+    background-color: #0056b3; /* Alterar a cor de fundo ao passar por cima */
 }

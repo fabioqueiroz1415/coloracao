@@ -1,20 +1,24 @@
+window.vertices = -1;
+
 function criarMatriz() {
-    var n = document.getElementById('tamanho').value;
+    vertices = document.getElementById('tamanho').value;
     var matrizDiv = document.getElementById('matriz');
     var letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    //var letra_linhas = letras.charAt(i);
+    document.getElementById("botao-cria-matriz").textContent = "Recriar Matriz";
     matrizDiv.innerHTML = '';
 
-    if(n>10 || n < 1){
-        alert("0 < nº de vértices <= 10");
+    if(vertices>9 || vertices < 1){
+        alert("0 < nº de vértices < 10");
+        document.getElementById("tamanho").value = 9;
         return;
     }
-    for(var i=-1; i<n; i++) {
-        for(var j=-1; j<n; j++) {
+    for(var i=-1; i<vertices; i++) {
+        for(var j=-1; j<vertices; j++) {
             if(i == -1) {
                 //rotulando colunas
                 var input = document.createElement('input');
                 input.type = 'texto';
+                input.id = i+' '+j;
                 input.value = letras.charAt(j);
                 input.readOnly = true;
                 input.classList.add('rotulo');
@@ -25,6 +29,7 @@ function criarMatriz() {
                 //rotulando linhas
                 var input = document.createElement('input');
                 input.type = 'texto';
+                input.id = i+' '+j;
                 input.value = letras.charAt(i);
                 input.readOnly = true;
                 input.classList.add('rotulo');
@@ -35,7 +40,7 @@ function criarMatriz() {
             input.type = 'number';
             input.id = i+' '+j;
             input.max = 1000;
-            input.min = -1000;
+            input.min = 0;
             input.classList.add('matriz-input');
             matrizDiv.appendChild(input);
         }
