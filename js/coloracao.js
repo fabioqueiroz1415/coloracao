@@ -8,15 +8,18 @@ function calculaColoracaoHarmoniosa() {
 
 function montarListaAdjacencias(matrizAdjacencia) {
     const listaAdjacencias = [];
-    for (let i = 0; i < matrizAdjacencia.length; i++) {
+    var vertices = window.vertices;
+    for (let i = 0; i < vertices; i++) {
         const adjacencias = [];
         for (let j = 0; j < matrizAdjacencia[i].length; j++) {
-            if (matrizAdjacencia[i][j] === 1) {
+            if (matrizAdjacencia[i][j] !== 0) {
+                
                 adjacencias.push(j);
             }
         }
         listaAdjacencias.push(adjacencias);
     }
+
     return listaAdjacencias;
 }
 
@@ -41,23 +44,26 @@ function verticeMaiorGrau(listaAdjacencias) {
     return vertice;
 }
 
+let corMaxima = 1;
+
 function coloreVertice(vertice, cores, listaAdjacencias) {
     if (cores[vertice] === 0) {
-        let corApropriada = 1;
-        while (true) {
-            let corDisponivel = true;
-            for (let i = 0; i < listaAdjacencias[vertice].length; i++) {
-                const adjacente = listaAdjacencias[vertice][i];
-                if (cores[adjacente] === corApropriada) {
-                    corDisponivel = false;
-                    break;
-                }
+        var coresUtilizadas = []; // Lista para armazenar as cores utilizadas pelos vizinhos
+        for (let i = 0; i < listaAdjacencias[vertice].length; i++) {
+            var adjacente = listaAdjacencias[vertice][i];
+            if (cores[adjacente] !== 0) {
+                coresUtilizadas.push(cores[adjacente]); // Adiciona a cor do vizinho à lista de cores utilizadas
             }
-            if (corDisponivel) {
-                cores[vertice] = corApropriada;
+        }
+        // Encontra a menor cor disponível que não está sendo utilizada pelos vizinhos
+        for (let cor = 1; ; cor++) {
+            if (!coresUtilizadas.includes(cor)) {
+                cores[vertice] = cor;
+                if (cor > corMaxima) {
+                    corMaxima = cor;
+                }
                 break;
             }
-            corApropriada++;
         }
     }
 }
@@ -74,10 +80,13 @@ function numeroCromaticoCores(matrizAdjacencia) {
 
     while (fila.length > 0) {
         const verticeAtual = fila.shift();
-        for (let i = 0; i < listaAdjacencias[verticeAtual].length; i++) {
-            const adjacente = listaAdjacencias[verticeAtual][i];
-            coloreVertice(adjacente, cores, listaAdjacencias);
-            fila.push(adjacente);
+        const adjacencias = listaAdjacencias[verticeAtual];
+        for (let i = 0; i < adjacencias.length; i++) {
+            const adjacente = adjacencias[i];
+            if (cores[adjacente] === 0) { // Verifica se o vértice adjacente ainda não foi colorido
+                coloreVertice(adjacente, cores, listaAdjacencias);
+                fila.push(adjacente); // Adiciona o vértice adjacente à fila para processamento posterior
+            }
         }
     }
 
@@ -92,6 +101,10 @@ function coloreVertices(matrizAdjacencia) {
         "#DAF7A6", // Light Green
         "#5F27CD", // Purple
         "#45CE30", // Green
+        "#8A2BE2", // BlueViolet
+        "#556B2F", // DarkOliveGreen
+        "#8B0000", // Dark Red
+        "#00FFFF"  // Aqua
     ];
     var cores = numeroCromaticoCores(matrizAdjacencia);
     
@@ -151,11 +164,12 @@ function isMatrizCheia() {
 function getMatriz() {
     var matriz = [];
     for(var i=0; i<vertices; i++) {
-        matriz.push([]);
+        const linha = [];
         for(var j=0; j<vertices; j++) {
             var input=document.getElementById(i+' '+j);
-            matriz[i].push(input.value);
+            linha.push(input.value);
         }
+        matriz.push(linha);
     }
     return matriz;
 }

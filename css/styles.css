@@ -57,3 +57,11 @@
 .botao:hover {
     background-color: #0056b3; /* Alterar a cor de fundo ao passar por cima */
 }
+
+.separacao > div{
+    margin-bottom: 60px;
+}
+
+.teste {
+    background-color:;
+}

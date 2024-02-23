@@ -14,23 +14,26 @@
     </head>
 
     <body>
-        <div class = "flex-container">
-            <div id="opcao">
-                <select id="opcoes" class="caixa-entrada">
-                    <option value="cromatico">Numero Cromático</option>
-                    <option value="harmoniosa">Coloracao Harmoniosa</option>
-                    <option value="completa">Coloração Completa</option>
-                </select>
-                <button onclick="colorirVertices()" class="botao">Colorir</button>
+        <div class="separacao">
+            <div class = "flex-container">
+                <div id="opcao">
+                    <select id="opcoes" class="caixa-entrada">
+                        <option value="cromatico">Numero Cromático</option>
+                        <option value="harmoniosa">Coloracao Harmoniosa</option>
+                        <option value="completa">Coloração Completa</option>
+                    </select>
+                    <button onclick="colorirVertices()" class="botao">Colorir</button>
+                </div>
+
+                <div>
+                    <div id="cria-matriz">
+                        <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="quantidade de vértices" class="caixa-entrada">
+                        <button onclick="criarMatriz()" class="botao" id="botao-cria-matriz">Criar Matriz</button>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <div id="cria-matriz">
-                    <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="quantidade de vértices" class="caixa-entrada">
-                    <button onclick="criarMatriz()" class="botao" id="botao-cria-matriz">Criar Matriz</button>
-                </div>
-                <div id="matriz"></div>
-            </div>
+            <div id="matriz"></div>
         </div>
     </body>
 </html>

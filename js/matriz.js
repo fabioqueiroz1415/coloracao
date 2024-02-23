@@ -1,6 +1,13 @@
 window.vertices = -1;
 
 function criarMatriz() {
+    var recriaMatriz;
+
+    if(isMatrizCheia()) {
+        recriaMatriz = window.confirm("Tem certeza que deseja apagar a matriz atual?");
+        if(!recriaMatriz) return;
+    }
+
     vertices = document.getElementById('tamanho').value;
     var matrizDiv = document.getElementById('matriz');
     var letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -46,4 +53,21 @@ function criarMatriz() {
         }
         matrizDiv.appendChild(document.createElement('br'));
     }
+}
+
+function isMatrizCheia() {
+    if(vertices == -1) return false;
+    
+    for(var i=0; i<vertices; i++) {
+        
+        for(var j=0; j<vertices; j++) {
+            var input=document.getElementById(i+' '+j);
+            if(input == null || input.value == '') {
+                return false;
+            }
+        }
+        
+    }
+    
+    return true;
 }
