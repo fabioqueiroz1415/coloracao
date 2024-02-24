@@ -145,10 +145,10 @@ function colorirVertices() {
     }
     var opcao = document.getElementById('opcoes').value;
     switch(opcao) {
-        case 'cromatico':
+        case 'coloracaoVertices':
             coloreVertices(getMatriz());
             break;
-        case 'harmoniosa':
+        case 'coloracaoArestas':
             
             break;
         case 'completa':

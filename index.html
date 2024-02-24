@@ -1,41 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Tipos de Coloração</title>
-        <!--css-->
-        <link rel="stylesheet" type="text/css" href="css//styles.css">
-
-        <!--ícone-->
-        <link rel="icon" href="images/icone.ico" type="image/x-ico">
-        
-        <!--scripts-->
-        <script src = "js//coloracao.js"></script>
-        <script src = "js//matriz.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/icone.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Coloração</title>
+        <script src="js/menu2.js"></script>
     </head>
-
     <body>
-        <div class="separacao">
-            <div class = "flex-container">
-                <div id="cria-matriz">
-                    <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="quantidade de vértices" class="caixa-entrada">
-                    <button onclick="criarMatriz()" class="botao" id="botao-cria-matriz">Criar Matriz Adjacência</button>
-                </div>
-                <div id="opcao">
-                    <select id="opcoes" class="caixa-entrada">
-                        <option value="cromatico">Numero Cromático</option>
-                        <option value="harmoniosa">Coloracao Harmoniosa</option>
-                        <option value="completa">Coloração Completa</option>
-                    </select>
-                    <button onclick="colorirVertices()" class="botao">Colorir</button>
-                </div>
+        <div class="div-main">
+            <select id="escolha">
+                <option value="coloracaoharmonica">Coloração Harmônica</option>
+                <option value="coloracaodevertices">Coloração de Vértices</option>
+                <option value="coloracaodearestas">Coloração de Arestas</option>
+                <option value="coloracaocompleta">Coloração Completa</option>
+            </select>
+            <div class="div-botoes">
+                <button class="button-proximo" onclick="irMenu2()">Próximo</button>
             </div>
-
-            <div>
-                <p id="resultado" class="resultado">Resultado:</p>
-            </div>
-
-            <div id="matriz"></div>
         </div>
     </body>
 </html>
+
 

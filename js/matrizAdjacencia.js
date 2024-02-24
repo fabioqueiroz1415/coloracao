@@ -2,7 +2,13 @@ window.vertices = -1;
 
 function criarMatriz() {
     var recriaMatriz;
+    vertices = document.getElementById('vertices').value;
 
+    if(vertices>9 || vertices < 1){
+        alert("0 < nº de vértices < 10");
+        document.getElementById("tamanho").value = 9;
+        return;
+    }
     if(isMatrizCheia()) {
         recriaMatriz = window.confirm("Tem certeza que deseja apagar a matriz atual?");
         if(!recriaMatriz) return;
@@ -11,17 +17,13 @@ function criarMatriz() {
     //omitindo o resultado anterior, se houver
     document.getElementById("resultado").style.visibility = "hidden";
 
-    vertices = document.getElementById('tamanho').value;
+    
     var matrizDiv = document.getElementById('matriz');
     var letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    document.getElementById("botao-cria-matriz").textContent = "Recriar Matriz Adjacência";
+    document.getElementById("botao-cria-matriz").textContent = "Recriar";
     matrizDiv.innerHTML = '';
 
-    if(vertices>9 || vertices < 1){
-        alert("0 < nº de vértices < 10");
-        document.getElementById("tamanho").value = 9;
-        return;
-    }
+
     for(var i=-1; i<vertices; i++) {
         for(var j=-1; j<vertices; j++) {
             if(i == -1) {
