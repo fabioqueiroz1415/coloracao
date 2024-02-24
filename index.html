@@ -6,21 +6,26 @@
         <link rel="icon" href="images/icone.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/styles.css">
         <title>Coloração</title>
-        <script src="js/menu2.js"></script>
+        <script src="js//menu2.js"></script>
+        <script src="js//index.js"></script>
     </head>
     <body>
         <div class="div-main">
-            <select id="escolha">
-                <option value="coloracaoharmonica">Coloração Harmônica</option>
-                <option value="coloracaodevertices">Coloração de Vértices</option>
-                <option value="coloracaodearestas">Coloração de Arestas</option>
-                <option value="coloracaocompleta">Coloração Completa</option>
-            </select>
+            <div class="div-inputs">
+                <input
+                type="number"
+                id="quantidade de vertices"
+                placeholder="Quantidade de vértices"
+                min="0"
+                max="9"
+                class="div-input"
+                >
+            </div>
+
             <div class="div-botoes">
                 <button class="button-proximo" onclick="irMenu2()">Próximo</button>
             </div>
         </div>
     </body>
+    
 </html>
-
-
