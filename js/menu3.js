@@ -3,7 +3,7 @@ var colunas = window.wColunas;
 var linhas = window.wLinhas;
 
 function irMenu3() {
-    window.location.href = "https://fabioqueiroz1415.github.io/coloracao/menu3";
+    window.location.href = "https://fabioqueiroz1415.github.io/coloracao/html/menu3";
 }
 
 function criarMatriz() {

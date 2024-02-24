@@ -1,6 +1,6 @@
 
 function irMenu2() {
-    window.location.href = "https://fabioqueiroz1415.github.io/coloracao/menu2.html";
+    window.location.href = "https://fabioqueiroz1415.github.io/coloracao/html/menu2.html";
 }
 
 window.wEscolha = -1;
