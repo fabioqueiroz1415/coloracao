@@ -8,7 +8,7 @@ function setQuantidadeVertices() {
     var qtd = localStorage.getItem("quantidadeVerticesGlobal");
 
     if(qtd) document.getElementById("quantidade de vertices").value = qtd;
-    limparVariaveisGlobais();
+    limparQuantidadeVerticesGlobal();
 }
 
 function setQuantidadeVerticesGlobal() {
@@ -19,6 +19,6 @@ function setQuantidadeVerticesGlobal() {
     localStorage.setItem("quantidadeVerticesGlobal", qtd);
 }
 
-function limparVariaveisGlobais() {
+function limparQuantidadeVerticesGlobal() {
     localStorage.setItem("quantidadeVerticesGlobal", "");
 }
