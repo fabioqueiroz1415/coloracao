@@ -1,5 +1,7 @@
 function irMenu2() {
-    window.location.href = "https://fabioqueiroz1415.github.io/coloracao/html/menu2.html";
+    var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\";
+    //var texto = "https:\\fabioqueiroz1415.github.io\\coloracao\\";
+    window.location.href = texto + "html\\menu2.html";
 }
 
 var colunas = localStorage.getItem("quantidadeVerticesGlobal");
