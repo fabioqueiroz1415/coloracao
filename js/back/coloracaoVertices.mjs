@@ -1,46 +1,72 @@
 var colunas = localStorage.getItem("quantidadeVerticesGlobal");
 var linhas = localStorage.getItem("quantidadeVerticesGlobal");
 var matrizAdjacencia = getMatriz();
-//main: calcula coloração
-// numeroCromatico
-// verticesPorCor
-/*
-function main() {
-    const numVertices = colunas;
-    const cores = Array(numVertices).fill(-1); // Inicializa todas as cores como -1 (sem cor)
-    let c = 1; // Primeira cor usada
 
-    cores[0] = 1; // Atribui a primeira cor ao primeiro vértice
-
-    for (let v = 1; v < numVertices; v++) {
-        let ok = true; // Indica se uma cor pode ser usada para o vértice atual
-
-        // Procura a primeira cor que pode ser usada para o vértice v
-        for (let k = 1; k <= c; k++) {
-            ok = true; // Assume que a cor k é válida inicialmente
-            // Verifica se algum vértice adjacente a v tem a cor k
-            for (let u = 0; u < v; u++) {
-                if (matrizAdjacencia[v][u] && cores[u] === k) {
-                    ok = false; // Cor k não pode ser usada para o vértice v
-                    break;
+function resultado() {
+            //titulo
+            var esclh = localStorage.getItem("escolhaGlobal");
+            document.getElementById("resultado-titulo").textContent = esclh;
+    
+            //numero cromatico
+            var crom = numeroCromatico();
+            document.getElementById("resultado-cores-distintas").textContent = crom;
+    
+            //determinar quais vértices tem qual cor
+            var varVerticesPorCor = verticesPorCor();
+    
+            //caracteres
+            var caracteres = "ABCDEFGHIJKLM";
+    
+            //cores
+            var cores = [
+                    "#FF00FF", // Magenta
+                    "#00DD62", // Verde
+                    "#FFD700", // Ouro
+                    "#FF6347", // Vermelho coral
+                    "#1E90FF", // Azul royal
+                    "#8A2BE2", // Violeta
+                    "#32CD32", // Verde-limão
+                    "#FF4500", // Laranja vermelho
+                    "#FFFF00", // Amarelo
+                    "#8B008B", // Magenta escuro
+                    "#00CED1", // Turquesa médio
+                    "#FF1493", // Rosa brilhante
+                    "#FF8C00", // Laranja escuro
+                    "#ADFF2F"  // Verde amarelado
+                ];
+    
+                for(var i = 0; i < crom; i ++) {
+                    var cor = cores[i];
+                    var input = document.createElement("input");
+                    
+                    input.readOnly = true;
+                    input.style.backgroundColor = cor;
+                    input.classList.add("input-cores");
+    
+                    var p = document.createElement("p");
+                    var texto = "";
+                    p.classList.add("p-resultado-cores");
+    
+                    texto = ": [";
+                    for(var j = 0; j < varVerticesPorCor[i].length; j ++) {
+                            var caracter = caracteres[varVerticesPorCor[i][j]]
+                            texto += caracter;
+                            if(!((j + 1) < varVerticesPorCor[i].length)) break;
+                            texto += ", ";
+                    }
+                    texto += "]";
+                    p.textContent = texto;
+    
+                    var div = document.createElement("div");
+                    div.classList.add("div-resultado-cores");
+                    div.appendChild(input);
+                    div.appendChild(p);
+    
+                    var elemento = document.getElementById("resultado");
+                    elemento.appendChild(div);
+                    
                 }
-            }
-            if (ok) {
-                cores[v] = k; // Atribui a cor k ao vértice v
-                break; // Sai do loop de cores
-            }
-        }
-
-        if (!ok) {
-            c++; // Incrementa o número de cores
-            cores[v] = c; // Atribui uma nova cor ao vértice v
-        }
-    }
-    for(var i = 0; i < cores.length; i ++) {
-        cores[i] --;
-    }
-    return cores; // Retorna o conjunto de cores atribuídas aos vértices
-}*/
+}
 
 function main() {
     const listaAdjacencias = montarListaAdjacencias();
