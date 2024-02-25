@@ -6,20 +6,28 @@
         <link rel="icon" href="../images/icone.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/styles.css">
         <title>Coloração</title>
-        <script src="..//js//menu3.js"></script>
-        <script src="..//js//menu2.js"></script>
-        <script src="..//js//index.js"></script>
+        <script src="../js/back/coloracaoVertices.mjs"></script>
+        <script src="../js/front/menu3.js"></script>
+        <script src="../js/front/menu4.js"></script>
+        <script src="../js/front/index.js"></script>
     </head>
-    <body onload="criarMatriz()">
+    <body onload="criarResultado()">
 
         <div class="div-main">
             <div class="div-resultado" id="resultado">
-                resultado
+                <p class="p-resultado-titulo" id="resultado-titulo"></p>
+                <div class="div-resultado-cores">
+                    <p class="p-resultado-cores">- <b id="resultado-cores-distintas">n</b> cores distintas, das quais:</p>
+                </div>
+                <div class="div-resultado-cores">
+                    <input type="text" class="input-cores">
+                    <p class="p-resultado-cores">: [A, B, C]</p>
+                </div>
             </div>
 
             <div class="div-botoes">
                 <button class="button-anterior" onclick="irMenu3()">Voltar</button>
-                <button class="button-proximo" onclick="irIndex()">Reiniciar</button>
+                <button class="button-proximo" onclick="limparVariaveisGlobais(); irIndex()">Reiniciar</button>
             </div>
         </div>
     </body>

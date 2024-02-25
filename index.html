@@ -6,24 +6,22 @@
         <link rel="icon" href="images/icone.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/styles.css">
         <title>Coloração</title>
-        <script src="js//menu2.js"></script>
-        <script src="js//index.js"></script>
+        <script src="js/front/menu2.js"></script>
+        <script src="js/front/index.js"></script>
     </head>
-    <body>
+    <body onload="setQuantidadeVertices()">
         <div class="div-main">
             <div class="div-inputs">
                 <input
                 type="number"
                 id="quantidade de vertices"
-                placeholder="Quantidade de vértices"
-                min="0"
-                max="9"
+                placeholder="Quantidade de vértices(2-7):"
                 class="div-input"
                 >
             </div>
 
             <div class="div-botoes">
-                <button class="button-proximo" onclick="irMenu2()">Próximo</button>
+                <button class="button-proximo" onclick="setQuantidadeVerticesGlobal(); irMenu2()">Próximo</button>
             </div>
         </div>
     </body>

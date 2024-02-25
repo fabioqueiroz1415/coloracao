@@ -4,22 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../images/icone.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="..//css/styles.css">
         <title>Coloração</title>
-        <script src="..//js//menu2.js"></script>
-        <script src="..//js//menu4.js"></script>
+        <script src="../js/front/menu2.js"></script>
+        <script src="../js/front/menu4.js"></script>
+        <script src="../js/front/menu3.js"></script>
     </head>
-    <body onload="inicializarVariaveisGlobais()">
+    <body onload="setEscolha()">
         <div class="div-main">
-            <select id="escolha">
-                <option value="coloracaoharmonica">Coloração Harmônica</option>
-                <option value="coloracaodevertices">Coloração de Vértices</option>
-                <option value="coloracaodearestas">Coloração de Arestas</option>
-                <option value="coloracaocompleta">Coloração Completa</option>
-            </select>
+            <div>
+                <p>Escolha o tipo de coloração:</p>
+                <select id="escolha">
+                    <option value="Coloração de Vértices">Coloração de Vértices</option>
+                    <option value="Coloração Harmônica">Coloração Harmônica</option>
+                    <option value="Coloração de Arestas">Coloração de Arestas</option>
+                    <option value="Coloração Completa">Coloração Completa</option>
+                </select>
+            </div>
             <div class="div-botoes">
-                <button class="button-anterior" onclick="irMenu2()">Voltar</button>
-                <button class="button-proximo" onclick="irMenu4()">Próximo</button>
+                <button class="button-anterior" onclick="setEscolhaGlobal(); irMenu2()">Voltar</button>
+                <button class="button-proximo" onclick="setEscolhaGlobal(); irMenu4()">Próximo</button>
             </div>
         </div>
     </body>
