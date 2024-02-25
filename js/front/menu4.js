@@ -1,6 +1,6 @@
 function irMenu4() {
-        var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\";
-        //var texto = "https:\\fabioqueiroz1415.github.io\\coloracao\\";
+        //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\";
+        var texto = "https:\\fabioqueiroz1415.github.io\\coloracao\\";
         window.location.href = texto + "html\\menu4.html";
 }
 function limparVariaveisGlobais() {
