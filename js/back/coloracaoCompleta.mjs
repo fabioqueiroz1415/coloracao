@@ -2,7 +2,23 @@ var colunas = localStorage.getItem("quantidadeVerticesGlobal");
 var linhas = localStorage.getItem("quantidadeVerticesGlobal");
 var matrizAdjacencia = getMatriz();
 
-function coloracaoVertices() {
+function getMatriz() {
+    var matriz = [];
+    for(var i=0; i<linhas; i++) {
+        const linha = [];
+        for(var j=0; j<colunas; j++) {
+            var id = i+' '+j;
+            var input = parseInt(localStorage.getItem("inputCelulaGlobal "+id));
+            if(i == j) input = 0;
+            linha.push(input);
+        }
+        matriz.push(linha);
+        
+    }
+    return matriz;
+}
+
+function coloracaoCompleta() {
     const listaAdjacencias = montarListaAdjacencias();
     const quantidadeVertices = listaAdjacencias.length;
     let cores = inicializarEstruturaCores(quantidadeVertices);
@@ -26,7 +42,21 @@ function coloracaoVertices() {
     for(var i = 0; i < cores.length; i ++) {
         cores[i] --;
     }
-    return cores;
+    return cores; // Retorna as cores atribuídas aos vértices
+}
+
+function verificaRepeticaoPares(cores) {
+    const pares = {};
+    for (let i = 0; i < cores.length; i++) {
+        for (let j = i + 1; j < cores.length; j++) {
+            const par = `${cores[i]},${cores[j]}`;
+            if (pares[par]) {
+                return false;
+            }
+            pares[par] = true;
+        }
+    }
+    return true;
 }
 
 function montarListaAdjacencias() {
@@ -80,22 +110,4 @@ function coloreVertice(vertice, cores, listaAdjacencias) {
             }
         }
     }
-}
-
-
-
-function getMatriz() {
-    var matriz = [];
-    for(var i=0; i<linhas; i++) {
-        const linha = [];
-        for(var j=0; j<colunas; j++) {
-            var id = i+' '+j;
-            var input = parseInt(localStorage.getItem("inputCelulaGlobal "+id));
-            if(i == j) input = 0;
-            linha.push(input);
-        }
-        matriz.push(linha);
-        
-    }
-    return matriz;
 }

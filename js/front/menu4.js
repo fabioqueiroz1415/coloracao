@@ -1,5 +1,5 @@
 function irMenu4() {
-        //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\";
+        //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\html\\menu4.html";
         var texto = "https://fabioqueiroz1415.github.io/coloracao/html/menu4.html";
     window.location.href = texto;
 }
@@ -9,30 +9,26 @@ function limparVariaveisGlobais() {
 
 function criarResultado() {
         var listasPorCor;
-        var escolha = localStorage.getItem("escolhaGlobal");;
+        var escolha = localStorage.getItem("escolhaGlobal");
+        var isArestas = false;
         switch(escolha) {
                 case "Coloração de Vértices":
-                        listasPorCor = getColoracaoVertices();
+                        listasPorCor = getPorCor(coloracaoVertices());
                         break;
                 case "Coloração Harmônica":
-                        //
-                        alert(escolha);
-                        //
+                        listasPorCor = getPorCor(coloracaoHarmonica());
                         break;
                 case "Coloração de Arestas":
-                        //
-                        alert(escolha);
-                        //
+                        listasPorCor = getPorCor(coloracaoArestas());
+                        isArestas = true;
                         break;
                 case "Coloração Completa":
-                        //
-                        alert(escolha);
-                        //
+                        listasPorCor = getPorCor(coloracaoCompleta());
                         break;
                 default:
                         alert(escolha + " não existe.");
         }
-        criarDivPrincipal(listasPorCor);
+        criarDivPrincipal(listasPorCor, isArestas);
 
 }
 
@@ -81,7 +77,7 @@ function criaNumeroCromatico(listasVerticesPorCor) {
         document.getElementById("resultado-cores-distintas").textContent = listasVerticesPorCor.length;
 }
 
-function criarDivPrincipal(listasVerticesPorCor) {
+function criarDivPrincipal(listasVerticesPorCor, isArestas) {
         criaTitulo();
         criaNumeroCromatico(listasVerticesPorCor);
         var cores = [
@@ -100,7 +96,11 @@ function criarDivPrincipal(listasVerticesPorCor) {
                 "#FF8C00", // Laranja escuro
                 "#ADFF2F"  // Verde amarelado
         ];
-        var caracteres = "ABCDEFGHIJKLM";
+        var caracteres = "ABCDEFGHIJKLM";;
+        if(isArestas) {
+                caracteres = "123456789";
+        }
+
         var numeroCromatico = listasVerticesPorCor.length;
         for(var i = 0; i < numeroCromatico; i ++){
                 var cor = cores[i];
@@ -113,3 +113,30 @@ function criarDivPrincipal(listasVerticesPorCor) {
         
         
 }
+
+function numeroCromatico(cores) {
+        var vertices = colunas;
+        var numCromatico = 0;
+        for(let i = 0; i < vertices; i ++) {
+            if(numCromatico < cores[i]) numCromatico = cores[i];
+        }
+        numCromatico ++;
+        return numCromatico;
+    }
+
+function getPorCor(listaCores) {
+        var listasPorCor = [];
+        var crom = numeroCromatico(listaCores)
+        for(var cor = 0; cor < crom; cor ++) {
+            var listaVertices = [];
+            
+            for(var vertice = 0; vertice < colunas; vertice ++) {
+    
+                if(listaCores[vertice] == cor) {
+                    listaVertices.push(vertice);
+                }
+            }
+            listasPorCor.push(listaVertices);
+        }
+        return listasPorCor;
+    }

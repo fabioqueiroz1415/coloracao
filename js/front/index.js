@@ -1,5 +1,5 @@
 function irIndex() {
-    //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\";
+    //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\index.html";
     var texto = "https://fabioqueiroz1415.github.io//coloracao";
     window.location.href = texto;
 }

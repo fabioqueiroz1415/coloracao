@@ -1,5 +1,5 @@
 function irMenu3() {
-    //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\";
+    //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\html\\menu3.html";
     var texto = "https://fabioqueiroz1415.github.io/coloracao/html/menu3.html";
     window.location.href = texto;
 }
