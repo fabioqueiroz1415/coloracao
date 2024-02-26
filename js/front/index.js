@@ -1,14 +1,14 @@
 function irIndex() {
-    //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\index.html";
-    var texto = "https://fabioqueiroz1415.github.io//coloracao";
-    window.location.href = texto;
+   //var texto = "D:\\Usuarios\\fabio\\Área de Trabalho\\VS CODE\\Teoria dos Grafos\\coloracao\\index.html";
+   var texto = "https://fabioqueiroz1415.github.io//coloracao";
+   window.location.href = texto;
 }
 
 function setQuantidadeVertices() {
     var qtd = localStorage.getItem("quantidadeVerticesGlobal");
 
     if(qtd) document.getElementById("quantidade de vertices").value = qtd;
-    limparVariaveisGlobais();
+    limparQuantidadeVerticesGlobal();
 }
 
 function setQuantidadeVerticesGlobal() {
@@ -19,6 +19,6 @@ function setQuantidadeVerticesGlobal() {
     localStorage.setItem("quantidadeVerticesGlobal", qtd);
 }
 
-function limparVariaveisGlobais() {
+function limparQuantidadeVerticesGlobal() {
     localStorage.setItem("quantidadeVerticesGlobal", "");
 }
