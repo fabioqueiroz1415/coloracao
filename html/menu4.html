@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../images/icone.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Coloração</title>
+        <script src="../js/back/coloracaoVertices.mjs"></script>
+        <script src="../js/back/coloracaoArestas.mjs"></script>
+        <script src="../js/back/coloracaoHarmonica.mjs"></script>
+        <script src="../js/back/coloracaoCompleta.mjs"></script>
+        <script src="../js/front/menu3.js"></script>
+        <script src="../js/front/menu4.js"></script>
+        <script src="../js/front/index.js"></script>
+    </head>
+    <body onload="criarResultado()">
+
+        <div class="div-main">
+            <div class="div-resultado" id="resultado">
+                <p class="p-resultado-titulo" id="resultado-titulo"></p>
+                <div class="div-resultado-cores">
+                    <p class="p-resultado-cores">- <b id="resultado-cores-distintas">n</b> cores distintas, das quais:</p>
+                </div>
+            </div>
+
+            <div class="div-botoes">
+                <button class="button-anterior" onclick="irMenu3()">Voltar</button>
+                <button class="button-proximo" onclick="limparVariaveisGlobais(); irIndex()">Reiniciar</button>
+            </div>
+        </div>
+    </body>
+    
+</html>

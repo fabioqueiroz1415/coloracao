@@ -1,41 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Tipos de Coloração</title>
-        <!--css-->
-        <link rel="stylesheet" type="text/css" href="css//styles.css">
-
-        <!--ícone-->
-        <link rel="icon" href="images/icone.ico" type="image/x-ico">
-        
-        <!--scripts-->
-        <script src = "js//coloracao.js"></script>
-        <script src = "js//matriz.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/icone.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Coloração</title>
+        <script src="js/front/menu2.js"></script>
+        <script src="js/front/index.js"></script>
     </head>
-
-    <body>
-        <div class="separacao">
-            <div class = "flex-container">
-                <div id="cria-matriz">
-                    <input type="number" id="tamanho" step = "1" min = "2" max = "10" placeholder="quantidade de vértices" class="caixa-entrada">
-                    <button onclick="criarMatriz()" class="botao" id="botao-cria-matriz">Criar Matriz Adjacência</button>
-                </div>
-                <div id="opcao">
-                    <select id="opcoes" class="caixa-entrada">
-                        <option value="cromatico">Numero Cromático</option>
-                        <option value="harmoniosa">Coloracao Harmoniosa</option>
-                        <option value="completa">Coloração Completa</option>
-                    </select>
-                    <button onclick="colorirVertices()" class="botao">Colorir</button>
-                </div>
+    <body onload="setQuantidadeVertices()">
+        <div class="div-main">
+            <div class="div-inputs">
+                <input
+                type="number"
+                id="quantidade de vertices"
+                placeholder="Quantidade de vértices(2-7):"
+                class="div-input"
+                >
             </div>
 
-            <div>
-                <p id="resultado" class="resultado">Resultado:</p>
+            <div class="div-botoes">
+                <button class="button-proximo" onclick="setQuantidadeVerticesGlobal(); irMenu2()">Próximo</button>
             </div>
-
-            <div id="matriz"></div>
         </div>
     </body>
+    
 </html>
-
