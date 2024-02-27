@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Coloração
 
 Este repositório contém um projeto relacionado à **coloração de imagens**. Ele foi criado por [**Fabio Queiroz**](https://github.com/fabioqueiroz1415) e está disponível [aqui](https://github.com/fabioqueiroz1415/coloracao), no GitHub.
