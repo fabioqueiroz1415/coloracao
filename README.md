@@ -1,5 +1,8 @@
 ---
 layout: default
+title: loss_function_mape
+has_children: false
+nav_order: 1
 ---
 
 # Coloração
