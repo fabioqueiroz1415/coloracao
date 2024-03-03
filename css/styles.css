@@ -6,10 +6,10 @@ body, html {
     background-color: dimgray;
 }
 p {
-    font-size: 18px;
+    font-size: 3.2527vw; /* 18px * 0.1804 */
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
-    margin-bottom: -8px;
+    margin-left: 1.804vw; /* 10px * 0.1804 */
+    margin-bottom: -1.442vw; /* -8px * 0.1804 */
 }
 .div-main{
     display: flex;
@@ -17,12 +17,12 @@ p {
     align-items:center;
     justify-content: space-between;
     background-color: rgb(228, 244, 255);
-    border-radius: 5px;
-    border: 3px solid rgb(255, 255, 255);
+    border-radius: 0.902vw; /* 5px * 0.1804 */
+    border: 0.5412vw solid rgb(255, 255, 255); /* 3px * 0.1804 */
 
-    margin-top: 50px;
-    width: 500px;
-    height: 400px;
+    margin-top: 9.02vw; /* 50px * 0.1804 */
+    width: 90.2vw; /* 500px * 0.1804 */
+    height: 72.16vw; /* 400px * 0.1804 */
 
 }
 
@@ -49,7 +49,7 @@ p {
 }
 
 .p-matriz {
-    margin-bottom: 4px;
+    margin-bottom: 0.7216vw; /* 4px * 0.1804 */
 }
 
 .div-resultado {
@@ -61,63 +61,57 @@ p {
 }
 
 .p-resultado-titulo {
-    font-size: 28px;
-    margin: 10px;
+    font-size: 5.054vw; /* 28px * 0.1804 */
+    margin: 1.804vw; /* 10px * 0.1804 */
 }
 
 .p-resultado-cores{
-    font-size: 20px;
+    font-size: 3.608vw; /* 20px * 0.1804 */
     margin: 0;
-    margin-left: 4px;
+    margin-left: 0.7216vw; /* 4px * 0.1804 */
 }
 
 .input-cores {
-    width: 20px;
-    height: 20px;
+    width: 3.608vw; /* 20px * 0.1804 */
+    height: 3.608vw; /* 20px * 0.1804 */
     border-style: none;
-    border-radius: 20px;
+    border-radius: 3.608vw; /* 20px * 0.1804 */
 
 }
 
 .div-resultado-cores {
     width: 90%;
-    height: 35px;
+    height: 6.294vw; /* 35px * 0.1804 */
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
 .div-input {
-    width: 250px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 45.1vw; /* 250px * 0.1804 */
+    padding: 1.804vw; /* 10px * 0.1804 */
+    margin: 1.804vw; /* 10px * 0.1804 */
+    border: 0.1804vw solid #ccc; /* 1px * 0.1804 */
+    border-radius: 0.902vw; /* 5px * 0.1804 */
     background-color: #f8f8f8;
     color: #333;
-    font-size: 16px;
+    font-size: 2.8872vw; /* 16px * 0.1804 */
     box-sizing: border-box;
 }
 
 .input-celula {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
+    width: 5.0536vw; /* 28px * 0.1804 */
+    height: 5.0536vw; /* 28px * 0.1804 */
+    font-size: 2.8872vw; /* 16px * 0.1804 */
     text-align: center;
-    border: 1px solid #96c0ff;
-}
-
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+    border: 0.1804vw solid #96c0ff; /* 1px * 0.1804 */
 }
 
 .input-rotulo-coluna, .input-rotulo-linha {
     border-style: hidden;
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
+    width: 5.0536vw; /* 28px * 0.1804 */
+    height: 5.0536vw; /* 28px * 0.1804 */
+    font-size: 2.8872vw; /* 16px * 0.1804 */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align:center;
@@ -125,15 +119,15 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 button {
-    margin: 10px;
+    margin: 1.804vw; /* 10px * 0.1804 */
     background-color: #bedeff;
     color: rgb(0, 0, 0);
-    padding: 12px 24px;
-    font-size: 16px;
-    border: 1px solid #96c0ff;
-    border-radius: 5px;
+    padding: 2.163vw 4.326vw; /* 12px * 0.1804 */
+    font-size: 2.8872vw; /* 16px * 0.1804 */
+    border: 0.1804vw solid #96c0ff; /* 1px * 0.1804 */
+    border-radius: 0.902vw; /* 5px * 0.1804 */
     cursor: pointer;
-    width: 120px;
+    width: 21.648vw; /* 120px * 0.1804 */
     text-align: center;
     
 }
@@ -152,16 +146,14 @@ button:hover {
 
 select {
     width: 90%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 1.804vw; /* 10px * 0.1804 */
+    font-size: 2.8872vw; /* 16px * 0.1804 */
+    border: 0.1804vw solid #ccc; /* 1px * 0.1804 */
+    border-radius: 0.902vw; /* 5px * 0.1804 */
     background-color: #f8f8f8;
     color: #333;
     appearance: none;
-    width: 480px;
-    margin: 10px;
-    font-size: 25px;
+    margin: 1.804vw; /* 10px * 0.1804 */
 }
 
 
